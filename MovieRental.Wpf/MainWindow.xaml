@@ -1,0 +1,34 @@
+﻿<Window x:Class="MovieRental.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MovieRental.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MovieRentalViewModel></local:MovieRentalViewModel>
+    </Window.DataContext>
+    <TabControl>
+        <TabItem Header="Movies">
+            <DataGrid ItemsSource="{Binding Movies}">
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="Rentals">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 5 0 0">
+                    <Label Content="Customer Name"></Label>
+                    <TextBox Text="{Binding CustomerName, UpdateSourceTrigger=PropertyChanged}" Margin="5 0 0 0" Width="200px"></TextBox>
+                </StackPanel>
+                <DataGrid ItemsSource="{Binding Rentals}" Margin="0 10 0 0" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Customer.Name}" Header="Customer Name"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding Movie.Title}" Header="Movie Name"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding DaysRented}" Header="Days rented"></DataGridTextColumn>
+                        <DataGridTextColumn Binding="{Binding PricePerDay}" Header="Price per day"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </TabItem>
+    </TabControl>
+</Window>

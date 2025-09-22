@@ -4,13 +4,21 @@ This is a dummy representation of a movie rental system.
 Can you help us fix some issues and implement missing features?
 
  * The app is throwing an error when we start, please help us. Also, tell us what caused the issue.
+ 
+ There was an error in the depedency injection setup. The services that are depedent on the DbContext need to be set up with Scoped context.
+ 
  * The rental class has a method to save, but it is not async, can you make it async and explain to us what is the difference?
  * Please finish the method to filter rentals by customer name, and add the new endpoint.
  * We noticed we do not have a table for customers, it is not good to have just the customer name in the rental.
    Can you help us add a new entity for this? Don't forget to change the customer name field to a foreign key, and fix your previous method!
  * In the MovieFeatures class, there is a method to list all movies, tell us your opinion about it.
+ 
+ This method will fetch all records from the database which should be avoided at all costs. 
+ It should implement pagination.
+ 
  * No exceptions are being caught in this api, how would you deal with these exceptions?
-
+ 
+ I've implemented an exception handler.
 
 	## Challenge (Nice to have)
 We need to implement a new feature in the system that supports automatic payment processing. Given the advancements in technology, it is essential to integrate multiple payment providers into our system.

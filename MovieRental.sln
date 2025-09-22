@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRental", "MovieRental\MovieRental.csproj", "{CBD8B421-2A59-4125-A992-F4F5B1FC0D3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRental.Wpf", "MovieRental.Wpf\MovieRental.Wpf.csproj", "{89A2C98F-CFE3-42B9-9FEA-4EBAD3B8A3FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRental.Tests", "MovieRental.Tests\MovieRental.Tests.csproj", "{2D6CA7AB-CBBE-4273-9D62-F084797B943E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +19,19 @@ Global
 		{CBD8B421-2A59-4125-A992-F4F5B1FC0D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBD8B421-2A59-4125-A992-F4F5B1FC0D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBD8B421-2A59-4125-A992-F4F5B1FC0D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89A2C98F-CFE3-42B9-9FEA-4EBAD3B8A3FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89A2C98F-CFE3-42B9-9FEA-4EBAD3B8A3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89A2C98F-CFE3-42B9-9FEA-4EBAD3B8A3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89A2C98F-CFE3-42B9-9FEA-4EBAD3B8A3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D6CA7AB-CBBE-4273-9D62-F084797B943E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6CA7AB-CBBE-4273-9D62-F084797B943E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D6CA7AB-CBBE-4273-9D62-F084797B943E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D6CA7AB-CBBE-4273-9D62-F084797B943E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE7A7819-B012-4A6D-BE75-0109F2F46C8C}
 	EndGlobalSection
 EndGlobal
